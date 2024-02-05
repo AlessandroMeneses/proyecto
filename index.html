@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de IA</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <script src="https://kit.fontawesome.com/a81cc0022a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="intro">
+    <img class="logo" src="logo.jpeg" alt="">
+        <h1>Conociendo la Inteligencia Artificial</h1>
+    </div>
+
+    <header>
+    <nav class="menu">
+        <ul class="men2">
+            <span id="close-menu-btn" 
+            class="material-symbols-outlined">close</span>
+                <button class="boton2"><li><a href="https://www.w3schools.com/html/default.asp">Inicio</a></li>
+                </button>
+
+
+                <button class="boton2">
+                    <li><a href="https://cloud.google.com/learn/what-is-artificial-intelligence?hl=es-419">Acerca de</a></li>
+                </button>
+
+                <button class="boton3">
+                    <li><a href="https://www.inboundcycle.com/blog-de-inbound-marketing/aplicaciones-inteligencia-artificial">Aplicaciones</a></li>
+                </button>
+
+
+                <button class="boton2">
+                    <li><a href="#">Contacto</a></li>
+                </button>
+                
+                <div class="boton">
+                    <div>
+                        <a href="sesion.html" class="ov-btn-grow-skew">Ingresar</a>
+                    </div>
+                </div>
+        </ul>
+        <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+    </nav>
+    </header>
+    <div>
+        <img class="fon" src="fon.jpg" alt="">
+    </div>
+    <section >
+        <div class="block">
+            <div class="tit1">
+            <h2>¿Qué es la Inteligencia Artificial?</h2>
+        </div>
+          <div class="text2"> 
+        <p>La inteligencia artificial (IA) se ha convertido en un término general para referirse a aplicaciones que realizan tareas complejas para las que antes eran necesaria la intervención humana, como la comunicación en línea con los clientes o jugar al ajedrez. El término a menudo se usa indistintamente junto con los nombres de sus subcampos, el aprendizaje automático y el aprendizaje profundo.</p> 
+
+            <p> Sin embargo, hay ciertas diferencias. Por ejemplo, el machine learning se centra en la creación de sistemas que aprenden o mejoran su rendimiento en función de los datos que consumen. Es importante tener en cuenta que, aunque todo machine learning es IA, no toda la IA es machine learning.</p>
+            
+            <p>Para obtener el valor completo de la IA, muchas empresas están haciendo inversiones significativas en equipos de ciencia de datos. La ciencia de datos combina estadísticas, informática y conocimiento empresarial para extraer valor de distintos orígenes de datos.</p>
+        </div>
+        <div class="tit1">
+            <h2>Aplicaciones de la IA</h2>
+        </div>
+        <div class="text2">
+            <p>La IA se utiliza en muchas áreas, como el procesamiento del lenguaje natural, la visión por computadora y los sistemas de recomendación. Revoluciona industrias como la salud, la automoción y la tecnología.</p>
+        
+            El principio fundamental de la IA es replicar, y luego superar, la forma en que los humanos perciben y reaccionan ante el mundo. Se está convirtiendo rápidamente en la piedra angular de la innovación. La IA, impulsada por varias formas de machine learning que reconocen patrones en los datos para permitir predicciones, puede agregar valor a su negocio de las siguientes maneras:
+
+            <p>• Proporcionando una comprensión más completa de la abundancia de datos disponibles
+            </p>
+              • Confiando en las predicciones para automatizar tareas excesivamente complejas o mundanas
+        
+            </p>
+        </div>
+        <div class="tit1">
+            <h2>Futuro de la IA</h2>
+        </div>
+        <div class="text2">
+            <p>El futuro de la IA promete avances emocionantes, desde asistentes virtuales más inteligentes hasta la automatización avanzada. Explorar este campo es clave para comprender y aprovechar sus beneficios.
+                <p>
+                El objetivo último de la IA, lograr que una máquina tenga una inteligencia de tipo general similar a la humana, es uno de los objetivos más ambiciosos que se ha planteado la ciencia. Por su dificultad, es comparable a otros grandes objetivos científicos como explicar el origen de la vida, el origen del universo o conocer la estructura de la materia. A lo largo de los últimos siglos, este afán por construir máquinas inteligentes nos ha conducido a inventar modelos o metáforas del cerebro humano.</p>
+            </p>
+        </div>
+        <!--
+        <img class="image" src="image\robot.jpg" alt="Robot de Inteligencia Artificial"> -->
+    </div>
+    </section>
+
+    <script>
+        const header = document.querySelector("header");
+        const hamburgerBtn = document.querySelector("#hamburger-btn");
+        const closeMenuBtn = document.querySelector("#close-menu-btn");
+  
+        hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+  
+        closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+
+
+
+
+
+function agregarComentario() {
+        var nombre = document.getElementById("nombre").value;
+        var comentario = document.getElementById("comentario").value;
+
+        var nuevoComentario = document.createElement("div");
+        nuevoComentario.className = "comentario";
+        nuevoComentario.innerHTML = "<p class='nombre'>" + nombre + "</p><p>" + comentario + "</p><p class='fecha'>Fecha: " + obtenerFechaActual() + "</p>";
+
+        var seccionComentarios = document.getElementById("comentarios");
+        seccionComentarios.insertBefore(nuevoComentario, seccionComentarios.childNodes[2]);
+
+        document.getElementById("nuevoComentarioForm").reset();
+}
+function obtenerFechaActual() {
+        var fecha = new Date();
+        var dia = fecha.getDate();
+        var mes = fecha.getMonth() + 1;
+        var anio = fecha.getFullYear();
+        return anio + "-" + mes + "-" + dia;
+}
+    </script>
+    
+        
+
+      <footer>
+        <section id="sec">
+            <div id="comentarios">
+
+                <!-- Nueva sección para comentarios -->
+
+                <div id="formulario">
+                <h2>Deja tu comentario:</h2>
+                <form id="nuevoComentarioForm">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+            
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" name="comentario" rows="4" required></textarea>
+            
+                    <button class="botonn"  type="button" onclick="agregarComentario()">Publicar Comentario</button>
+                </form>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <!--<script src="C:\Users\ADSI\Desktop\Taller\script.js"></script>-->
+</body>
+</html>
